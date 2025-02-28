@@ -8,3 +8,6 @@ html,
 body{
     width: 100%;
 }
+canvas{
+    background-color: black;
+}
