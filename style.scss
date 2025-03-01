@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html,
+body{
+    width: 100%;
+}
+
+//Variables 
+$bg-color: #a49c9c;
+$text-color: white;
+$br-radius: 8px;
+$fnh-weight: 500;
+$fn-weight: 300;
+
+//Button bg color
+$bt-bg-color: black;
+
+//Padding variables
+$pd-04: 0.4em; 
+$pd-1: 1em; 
+
+//Mixins
+//@mixin
+
+header{
+    width: 100%;
+    nav{
+        width: 100%;
+        padding: $pd-04;
+        border-bottom: 1px solid black;
+        h1{
+            text-align: center;
+            font-weight: $fnh-weight;
+        }
+    }
+}
+.container{
+    width: 100%;
+    padding: $pd-1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    .element{
+        width: 100%;
+        padding: $pd-04;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        border-radius: $br-radius;
+        .frame-container{
+            width: 100%;
+            iframe{
+                width: 100%;
+                aspect-ratio: 16/10;
+                border-radius: $br-radius;
+            }
+        }
+        .name-button-container{
+            display: flex;
+            gap: 1em;
+            padding: $pd-04;
+            .name-container{
+                width: 100%;
+                padding: $pd-1;
+                border-radius: $br-radius;
+                background-color: $bt-bg-color;
+                .name{
+                    font-weight: $fn-weight;
+                    color: white;
+                }
+            }
+            .launcher-button{
+                padding: $pd-1;
+                border-radius: $br-radius;
+                background-color: $bt-bg-color;
+                .launcher{
+                    font-weight: $fn-weight;
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
