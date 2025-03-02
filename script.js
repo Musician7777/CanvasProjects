@@ -1,4 +1,5 @@
 
+
 //Data
 const data = {
     elem1:{
@@ -16,6 +17,10 @@ const data = {
     elem4:{
         name: 'Matrix Rain',
         web: 'Matrix Rain/index.html',
+    },
+    elem5:{
+        name: 'Audio Visualizer',
+        web: 'Working With Audio/index.html'
     }
 }
 
@@ -44,5 +49,28 @@ for(let elem in data){
                 </div>`;
 //Nothing
 conatiner.appendChild(newElement);
-console.log(data[elem].name)
+}
+
+//Upload manager
+let uploadBanner = document.querySelector('.upload-box');
+function showUpload(){
+    uploadBanner.style.display = 'block';
+}
+function closeUpload(){
+    uploadBanner.style.display = 'none';
+}
+function confirmUpload(){
+    let webName = document.querySelector('.input-name').value;
+    let webAddress = document.querySelector('.input-web').value;
+    
+    if(webName.length !== 0 && webAddress.lenght !== 0){
+        data[`elem${Object.keys(data).length + 1}`] = {
+            name: webName,
+            web: webAddress
+        }
+        uploadBanner.style.display = 'none';
+    }else{
+        prompt("Enter proper values");
+    }
+
 }

@@ -24,7 +24,14 @@ $pd-04: 0.4em;
 $pd-1: 1em; 
 
 //Mixins
-//@mixin
+@mixin button(){
+    width: 100%;
+    padding: $pd-04;
+    background-color: black;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+}
 
 header{
     width: 100%;
@@ -83,6 +90,51 @@ header{
                     text-decoration: none;
                 }
             }
+        }
+    }
+}
+.upload{
+    width: 100%;
+    position: relative;
+    .parent-upload-box{
+        width: 100%;
+        position: absolute;
+        padding: $pd-1;
+        .upload-box{
+            width: 100%;
+            border-radius: $br-radius;
+            padding: $pd-04;
+            background-color: black;
+            display: none;
+            p{
+                color: white;
+            }
+            input{
+                outline: none;
+                width: 100%;
+                background-color: black;
+                border: 1px solid white;
+                border-radius: 5px;
+                padding: $pd-04;
+                color: white;
+                margin-bottom: $pd-1;
+            }
+            // input[placeholder="Name"]{
+            //     margin-bottom: $pd-1;
+            // }
+            button{
+               @include button();
+               margin-bottom: $pd-04;
+               border: 1px solid white;
+            }
+        }
+    }
+
+    .button-holder{
+        width: 100%;
+        padding: $pd-1;
+        button{
+            @include button();
         }
     }
 }

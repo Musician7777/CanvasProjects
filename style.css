@@ -70,4 +70,56 @@ header nav h1 {
   font-weight: 300;
   color: white;
   text-decoration: none;
+}
+
+.upload {
+  width: 100%;
+  position: relative;
+}
+.upload .parent-upload-box {
+  width: 100%;
+  position: absolute;
+  padding: 1em;
+}
+.upload .parent-upload-box .upload-box {
+  width: 100%;
+  border-radius: 8px;
+  padding: 0.4em;
+  background-color: black;
+  display: none;
+}
+.upload .parent-upload-box .upload-box p {
+  color: white;
+}
+.upload .parent-upload-box .upload-box input {
+  outline: none;
+  width: 100%;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0.4em;
+  color: white;
+  margin-bottom: 1em;
+}
+.upload .parent-upload-box .upload-box button {
+  width: 100%;
+  padding: 0.4em;
+  background-color: black;
+  color: white;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 0.4em;
+  border: 1px solid white;
+}
+.upload .button-holder {
+  width: 100%;
+  padding: 1em;
+}
+.upload .button-holder button {
+  width: 100%;
+  padding: 0.4em;
+  background-color: black;
+  color: white;
+  outline: none;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
